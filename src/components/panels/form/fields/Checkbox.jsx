@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { update } from '../../../../slice.js'
 import { Checkbox, FormControlLabel, Grid } from "@mui/material"
+
+import { update } from '../../../../slice.js'
 
 
 const FormCheckbox = ({ name, label, _default = false }) => {
