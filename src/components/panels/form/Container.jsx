@@ -8,8 +8,12 @@ import FormSlider from './fields/Slider'
 import FormSwitch from './fields/Switch'
 import FormTextArea from './fields/TextArea'
 import FormTextField from './fields/TextField'
+import { useFormik } from "formik"
 
 const FormContainer = ({ subsection }) => {
+    // TODO: Override formik.handleChange with redux dispatch call
+    const formik = useFormik()
+
     return (
         <Box>
             <FormHeading heading={subsection.heading} />
@@ -17,6 +21,7 @@ const FormContainer = ({ subsection }) => {
                 {subsection.fields.map(field => {
                     let key = `${subsection.heading}-${field.id}-field`
 
+                    // TODO: Pass formik props down to fields (touched, errors, etc.)
                     switch (field.type) {
                         case 'checkbox':
                             return <FormCheckboxGroup key={key} {...field} />

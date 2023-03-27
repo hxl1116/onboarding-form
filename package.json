@@ -20,7 +20,6 @@
     "@reduxjs/toolkit": "^1.9.3",
     "feather-icons-react": "^0.6.2",
     "formik": "^2.2.9",
-    "formik-mui": "^5.0.0-alpha.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "react": "^18.2.0",
